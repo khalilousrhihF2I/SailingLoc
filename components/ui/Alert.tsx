@@ -44,14 +44,14 @@ export function Alert({ type = 'info', children, onClose }: AlertProps) {
 
   return (
     <div className={`flex items-start gap-3 p-4 rounded-lg border ${config.bg} ${config.border}`}>
-      <Icon className={`flex-shrink-0 ${config.iconColor}`} size={20} />
+      <Icon className={`shrink-0 ${config.iconColor}`} size={20} />
       <div className={`flex-1 ${config.text}`}>
         {children}
       </div>
       {onClose && (
-        <button 
+        <button
           onClick={onClose}
-          className={`flex-shrink-0 ${config.text} hover:opacity-70`}
+          className={`shrink-0 ${config.text} hover:opacity-70`}
         >
           ×
         </button>

@@ -185,7 +185,7 @@ export function StripeCheckout({ amount, onSuccess, onCancel }: StripeCheckoutPr
         {/* Security Features */}
         <div className="bg-gray-50 rounded-lg p-4">
           <div className="flex items-start gap-3 text-sm text-gray-700">
-            <Check className="text-green-600 flex-shrink-0 mt-0.5" size={18} />
+            <Check className="text-green-600 shrink-0 mt-0.5" size={18} />
             <div>
               <div className="mb-1">Vos informations sont sécurisées</div>
               <div className="text-xs text-gray-600">

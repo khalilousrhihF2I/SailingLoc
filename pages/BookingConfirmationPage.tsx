@@ -65,7 +65,7 @@ export function BookingConfirmationPage({ bookingData, onNavigate }: BookingConf
 
         {/* Confirmation Email Notice */}
         <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg flex items-start gap-3">
-          <Mail className="text-blue-600 flex-shrink-0 mt-0.5" size={20} />
+          <Mail className="text-blue-600 shrink-0 mt-0.5" size={20} />
           <div className="text-sm text-blue-800">
             <div className="mb-1">Un email de confirmation a été envoyé à <strong>{renterEmail}</strong></div>
             <div className="text-xs text-blue-700">
@@ -80,7 +80,7 @@ export function BookingConfirmationPage({ bookingData, onNavigate }: BookingConf
 
           {/* Boat Info */}
           <div className="flex gap-4 mb-6 pb-6 border-b border-gray-200">
-            <div className="w-32 h-24 rounded-lg overflow-hidden flex-shrink-0">
+            <div className="w-32 h-24 rounded-lg overflow-hidden shrink-0">
               <ImageWithFallback
                 src={boat.image}
                 alt={boat.name}
@@ -152,7 +152,7 @@ export function BookingConfirmationPage({ bookingData, onNavigate }: BookingConf
           <h3 className="text-gray-900 mb-4">Prochaines étapes</h3>
           <div className="space-y-4">
             <div className="flex items-start gap-3">
-              <div className="w-8 h-8 bg-ocean-100 rounded-full flex items-center justify-center flex-shrink-0 text-sm text-ocean-700">
+              <div className="w-8 h-8 bg-ocean-100 rounded-full flex items-center justify-center shrink-0 text-sm text-ocean-700">
                 1
               </div>
               <div>
@@ -163,7 +163,7 @@ export function BookingConfirmationPage({ bookingData, onNavigate }: BookingConf
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <div className="w-8 h-8 bg-ocean-100 rounded-full flex items-center justify-center flex-shrink-0 text-sm text-ocean-700">
+              <div className="w-8 h-8 bg-ocean-100 rounded-full flex items-center justify-center shrink-0 text-sm text-ocean-700">
                 2
               </div>
               <div>
@@ -174,7 +174,7 @@ export function BookingConfirmationPage({ bookingData, onNavigate }: BookingConf
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <div className="w-8 h-8 bg-ocean-100 rounded-full flex items-center justify-center flex-shrink-0 text-sm text-ocean-700">
+              <div className="w-8 h-8 bg-ocean-100 rounded-full flex items-center justify-center shrink-0 text-sm text-ocean-700">
                 3
               </div>
               <div>

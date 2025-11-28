@@ -115,7 +115,7 @@ export function BoatDetailPage({ boatId, onNavigate }: BoatDetailPageProps) {
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                 {boat.equipment.map((item, index) => (
                   <div key={index} className="flex items-center gap-2 text-gray-700">
-                    <CheckCircle size={18} className="text-green-500 flex-shrink-0" />
+                    <CheckCircle size={18} className="text-green-500 shrink-0" />
                     <span>{item}</span>
                   </div>
                 ))}
@@ -152,7 +152,7 @@ export function BoatDetailPage({ boatId, onNavigate }: BoatDetailPageProps) {
                 {boatReviews.map((review) => (
                   <div key={review.id} className="border-b border-gray-200 last:border-0 pb-6 last:pb-0">
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-ocean-600 rounded-full flex items-center justify-center text-white flex-shrink-0">
+                      <div className="w-12 h-12 bg-ocean-600 rounded-full flex items-center justify-center text-white shrink-0">
                         {review.userAvatar}
                       </div>
                       <div className="flex-1">

@@ -162,7 +162,7 @@ export function BoatDetailPageWithAvailability({ boatId, onNavigate }: BoatDetai
               <div className="grid grid-cols-2 gap-3">
                 {boat.equipment.map((item, index) => (
                   <div key={index} className="flex items-center gap-2 text-gray-600">
-                    <CheckCircle size={18} className="text-ocean-600 flex-shrink-0" />
+                    <CheckCircle size={18} className="text-ocean-600 shrink-0" />
                     <span>{item}</span>
                   </div>
                 ))}

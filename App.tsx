@@ -161,7 +161,7 @@ export default function App() {
       case 'forgot-password':
         return (
           <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4">
-            <div className="w-full max-w-md">
+            <div style={{ width: '100%', maxWidth: '28rem' }}>
               <div className="bg-white rounded-xl p-8 shadow-sm">
                 <h3 className="text-gray-900 mb-6">Mot de passe oublié</h3>
                 <p className="text-gray-600 mb-6">
@@ -170,11 +170,11 @@ export default function App() {
                 <input
                   type="email"
                   placeholder="votre@email.com"
-                  className="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-ocean-500 mb-6"
+                  className="w-full mt-4 px-4 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-ocean-500 mb-6"
                 />
                 <button
                   onClick={() => navigate('login')}
-                  className="w-full px-5 py-2.5 bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors"
+                  className="w-full mt-4 px-5 py-2.5 bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors"
                 >
                   Envoyer le lien
                 </button>

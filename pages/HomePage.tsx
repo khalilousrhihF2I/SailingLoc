@@ -162,7 +162,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
             Gagnez jusqu'à 20 000€ par an en louant votre bateau sur SailingLoc
           </p>
           <Button 
-            variant="secondary" 
+            variant="ghost" 
             size="lg"
             onClick={() => onNavigate('register')}
           >

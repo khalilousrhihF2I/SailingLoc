@@ -153,7 +153,7 @@ export function OwnerDashboard({ onNavigate, onLogout }: OwnerDashboardProps) {
                   <div className="space-y-4">
                     {ownerBookings.slice(0, 3).map((booking) => (
                       <div key={booking.id} className="flex items-center gap-4 p-4 border border-gray-200 rounded-lg">
-                        <div className="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+                        <div className="w-16 h-16 rounded-lg overflow-hidden shrink-0">
                           <ImageWithFallback
                             src={booking.boatImage}
                             alt={booking.boatName}
@@ -265,7 +265,7 @@ export function OwnerDashboard({ onNavigate, onLogout }: OwnerDashboardProps) {
                     >
                       {/* Main booking info */}
                       <div className="flex flex-col md:flex-row gap-4 p-4">
-                        <div className="w-full md:w-32 h-24 rounded-lg overflow-hidden flex-shrink-0">
+                        <div className="w-full md:w-32 h-24 rounded-lg overflow-hidden shrink-0">
                           <ImageWithFallback
                             src={booking.boatImage}
                             alt={booking.boatName}
@@ -460,7 +460,7 @@ export function OwnerDashboard({ onNavigate, onLogout }: OwnerDashboardProps) {
                   {ownerBoats.find(b => b.id === selectedBoatForCalendar) && (
                     <div className="mb-6 p-4 bg-ocean-50 rounded-lg">
                       <div className="flex items-center gap-4">
-                        <div className="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
+                        <div className="w-20 h-20 rounded-lg overflow-hidden shrink-0">
                           <ImageWithFallback
                             src={ownerBoats.find(b => b.id === selectedBoatForCalendar)!.image}
                             alt={ownerBoats.find(b => b.id === selectedBoatForCalendar)!.name}

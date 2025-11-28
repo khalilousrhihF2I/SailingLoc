@@ -156,7 +156,7 @@ export function AdminDashboard({ onNavigate, onLogout }: AdminDashboardProps) {
                 {/* Alerts */}
                 <Card className="p-6 bg-orange-50 border-orange-200">
                   <div className="flex items-start gap-3">
-                    <AlertCircle className="text-orange-600 flex-shrink-0" size={24} />
+                    <AlertCircle className="text-orange-600 shrink-0" size={24} />
                     <div>
                       <h4 className="text-orange-900 mb-2">Actions requises</h4>
                       <ul className="space-y-1 text-sm text-orange-800">
@@ -263,7 +263,7 @@ export function AdminDashboard({ onNavigate, onLogout }: AdminDashboardProps) {
                   <div className="space-y-4">
                     {boats.slice(0, 5).map((boat) => (
                       <div key={boat.id} className="flex items-center gap-4 p-4 border border-gray-200 rounded-lg">
-                        <div className="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
+                        <div className="w-20 h-20 rounded-lg overflow-hidden shrink-0">
                           <img src={boat.image} alt={boat.name} className="w-full h-full object-cover" />
                         </div>
                         <div className="flex-1">

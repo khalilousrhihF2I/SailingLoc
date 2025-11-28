@@ -130,7 +130,7 @@ export function DestinationsPage({ onNavigate }: DestinationsPageProps) {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-white mb-4">Destinations de rêve</h1>
-            <p className="text-lg md:text-xl text-ocean-100 max-w-3xl mx-auto">
+            <p className="text-white-600 mb-8">
               Explorez les plus belles destinations nautiques et trouvez le bateau parfait pour votre prochaine aventure
             </p>
           </div>
@@ -217,7 +217,7 @@ export function DestinationsPage({ onNavigate }: DestinationsPageProps) {
                   />
                   <div className="absolute top-4 right-4">
                     <Badge variant="success" className="bg-white text-ocean-900">
-                      <TrendingUp size={14} />
+                      <TrendingUp size={14} className='mr-1' />
                       Populaire
                     </Badge>
                   </div>
@@ -254,7 +254,7 @@ export function DestinationsPage({ onNavigate }: DestinationsPageProps) {
                     </div>
                   </div>
 
-                  <div className="mb-4">
+                  <div className="mb-4 height-bc">
                     <div className="text-sm text-gray-500 mb-2">À découvrir :</div>
                     <div className="flex gap-2 flex-wrap">
                       {destination.highlights.slice(0, 3).map((highlight, idx) => (
@@ -293,10 +293,10 @@ export function DestinationsPage({ onNavigate }: DestinationsPageProps) {
           <p className="text-xl text-ocean-100 mb-8">
             Contactez-nous et nous vous aiderons à trouver le bateau parfait pour votre prochaine aventure
           </p>
-          <div className="flex gap-4 justify-center flex-wrap">
+          <div className="flex gap-4 justify-center flex-wrap mt-3">
             <Button 
-              variant="secondary" 
-              size="lg"
+              variant="ghost" 
+              size="lg" className="bg-white text-ocean-600 hover:bg-ocean-50"
               onClick={() => onNavigate('contact')}
             >
               Nous contacter

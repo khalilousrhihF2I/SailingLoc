@@ -152,7 +152,7 @@ export function RenterDashboard({ onNavigate, onLogout }: RenterDashboardProps) 
                           className="flex flex-col md:flex-row gap-4 p-4 cursor-pointer"
                           onClick={() => onNavigate('booking-detail', { bookingId: booking.id })}
                         >
-                          <div className="w-full md:w-32 h-24 rounded-lg overflow-hidden flex-shrink-0">
+                          <div className="w-full md:w-32 h-24 rounded-lg overflow-hidden shrink-0">
                             <ImageWithFallback
                               src={booking.boatImage}
                               alt={booking.boatName}

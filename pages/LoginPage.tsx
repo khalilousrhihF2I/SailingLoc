@@ -114,7 +114,7 @@ export function LoginPage({ onLogin, onNavigate }: LoginPageProps) {
           {/* Demo accounts info */}
           <div className="mt-6 p-4 bg-ocean-50 rounded-lg">
             <p className="text-sm text-ocean-800 mb-3">Comptes de démonstration :</p>
-            <div className="space-y-2">
+            <div className="space-y-2 mt-3 mb-3">
               <button
                 type="button"
                 onClick={() => fillDemoAccount('renter')}
@@ -151,8 +151,8 @@ export function LoginPage({ onLogin, onNavigate }: LoginPageProps) {
                 <span className="text-xs text-ocean-600 group-hover:text-ocean-700">admin@sailingloc.com</span>
               </button>
             </div>
-            <p className="mt-3 text-xs text-ocean-600 text-center">
-              Mot de passe : demo123
+            <p className="mt-3 text-xs text-ocean-600">
+              Mot de passe : <b>demo123</b>
             </p>
           </div>
         </Card>

@@ -101,7 +101,7 @@ export function DateRangePicker({
       {showValidation && hasError && (
         <Alert type="error">
           <div className="flex items-start gap-2">
-            <AlertCircle size={20} className="flex-shrink-0 mt-0.5" />
+            <AlertCircle size={20} className="shrink-0 mt-0.5" />
             <div>
               <p>{validationError || availabilityError}</p>
               {availabilityError && !validationError && (

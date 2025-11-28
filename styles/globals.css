@@ -183,3 +183,8 @@ button:focus-visible {
 input, textarea, select {
   font-family: inherit;
 }
+
+
+.height-bc {
+  height: 95px;
+}

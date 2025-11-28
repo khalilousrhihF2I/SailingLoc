@@ -224,7 +224,7 @@ export function BookingFlow({
 
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="flex items-start gap-3 text-sm text-gray-700">
-                      <Shield className="text-ocean-600 flex-shrink-0 mt-0.5" size={18} />
+                      <Shield className="text-ocean-600 shrink-0 mt-0.5" size={18} />
                       <div>
                         <div className="mb-1">Vos données sont protégées</div>
                         <div className="text-xs text-gray-600">
@@ -300,7 +300,7 @@ export function BookingFlow({
 
               <div className="bg-ocean-50 rounded-lg p-3 text-sm text-ocean-800">
                 <div className="flex items-start gap-2">
-                  <Shield size={16} className="flex-shrink-0 mt-0.5" />
+                  <Shield size={16} className="shrink-0 mt-0.5" />
                   <div className="text-xs">
                     Votre paiement est sécurisé et protégé par notre garantie satisfaction
                   </div>

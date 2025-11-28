@@ -102,7 +102,7 @@ export function ContactPage({ onNavigate }: SecondaryPageProps) {
           <div className="space-y-6">
             <Card className="p-6">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-ocean-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-ocean-100 rounded-lg flex items-center justify-center shrink-0">
                   <Mail className="text-ocean-600" size={24} />
                 </div>
                 <div>
@@ -115,7 +115,7 @@ export function ContactPage({ onNavigate }: SecondaryPageProps) {
 
             <Card className="p-6">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-turquoise-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-turquoise-100 rounded-lg flex items-center justify-center shrink-0">
                   <Phone className="text-turquoise-600" size={24} />
                 </div>
                 <div>
@@ -128,7 +128,7 @@ export function ContactPage({ onNavigate }: SecondaryPageProps) {
 
             <Card className="p-6">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center shrink-0">
                   <MapPin className="text-orange-600" size={24} />
                 </div>
                 <div>

@@ -18,7 +18,7 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
               <Anchor className="text-white" size={40} />
             </div>
             <h1 className="text-4xl md:text-5xl mb-6">À propos de SailingLoc</h1>
-            <p className="text-xl text-ocean-100 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-ocean-100 px-4">
               La première plateforme française de location de bateaux entre particuliers.
               Notre mission : rendre la navigation accessible à tous.
             </p>
@@ -75,7 +75,7 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-gray-900 mb-4">Nos Valeurs</h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-600 mb-4">
               Des principes qui guident chacune de nos actions
             </p>
           </div>
@@ -129,7 +129,7 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-gray-900 mb-4">Notre Fondateur</h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-600 mb-4">
               Une vision entrepreneuriale au service de la navigation
             </p>
           </div>
@@ -158,17 +158,17 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
                   
                   <div className="space-y-3 mb-6">
                     <div className="flex items-start gap-3">
-                      <Award className="text-ocean-600 mt-1 flex-shrink-0" size={20} />
+                      <Award className="text-ocean-600 mt-1 shrink-0" size={20} />
                       <div>
                         <div className="text-gray-900">Formation</div>
                         <div className="text-gray-600">
-                          Étudiant en 3ème année à l'École DSP - Institut F2I
+                          Étudiant en 4ème année à l'École DSP - Institut F2I
                         </div>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-3">
-                      <TrendingUp className="text-ocean-600 mt-1 flex-shrink-0" size={20} />
+                      <TrendingUp className="text-ocean-600 mt-1 shrink-0" size={20} />
                       <div>
                         <div className="text-gray-900">Vision</div>
                         <div className="text-gray-600">
@@ -178,7 +178,7 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
                     </div>
 
                     <div className="flex items-start gap-3">
-                      <Anchor className="text-ocean-600 mt-1 flex-shrink-0" size={20} />
+                      <Anchor className="text-ocean-600 mt-1 shrink-0" size={20} />
                       <div>
                         <div className="text-gray-900">Mission</div>
                         <div className="text-gray-600">
@@ -218,7 +218,7 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-gray-900 mb-4">Notre Impact</h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-600 mb-4">
               Des chiffres qui parlent d'eux-mêmes
             </p>
           </div>
@@ -251,22 +251,22 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
       {/* Call to Action */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="p-12 bg-gradient-to-br from-ocean-600 to-ocean-800 text-white text-center">
+          <Card className="p-12 bg-linear-to-br from-ocean-600 to-ocean-800 text-white text-center">
             <h2 className="text-white mb-6">Rejoignez l'aventure SailingLoc</h2>
-            <p className="text-ocean-100 text-lg mb-8 max-w-2xl mx-auto">
+            <p className="text-white-600 mb-4">
               Que vous soyez locataire à la recherche de nouvelles expériences nautiques 
               ou propriétaire souhaitant partager votre passion, SailingLoc est fait pour vous.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-2">
               <Button
-                variant="secondary"
+                variant="ghost"
                 onClick={() => onNavigate('search')}
                 className="bg-white text-ocean-600 hover:bg-gray-100"
               >
                 Rechercher un bateau
               </Button>
               <Button
-                variant="secondary"
+                variant="ghost"
                 onClick={() => onNavigate('register')}
                 className="bg-orange-500 text-white hover:bg-orange-600 border-none"
               >
@@ -281,11 +281,11 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
       <section className="py-16 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-gray-900 mb-4">Une question ?</h2>
-          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-gray-600 mb-8">
             Notre équipe est à votre écoute pour répondre à toutes vos questions 
             et vous accompagner dans votre expérience SailingLoc.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-2">
             <Button
               variant="primary"
               onClick={() => onNavigate('contact')}

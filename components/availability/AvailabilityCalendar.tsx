@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Calendar as CalendarIcon, Save, X, Info } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { Alert } from '../ui/Alert';
@@ -445,7 +445,7 @@ export function AvailabilityCalendar({ boatId, onUpdate }: AvailabilityCalendarP
       {/* Instructions */}
       <Alert type="info">
         <div className="flex items-start gap-2">
-          <Info size={20} className="flex-shrink-0 mt-0.5" />
+          <Info size={20} className="shrink-0 mt-0.5" />
           <div className="text-sm">
             {mode === 'block' ? (
               <>

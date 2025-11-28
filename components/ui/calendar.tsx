@@ -2,10 +2,10 @@
 
 import * as React from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { DayPicker } from "react-day-picker@8.10.1";
+import { DayPicker } from "react-day-picker";
 
 import { cn } from "./utils";
-import { buttonVariants } from "./button";
+import { buttonVariants } from "./Button";
 
 function Calendar({
   className,
@@ -60,13 +60,16 @@ function Calendar({
         ...classNames,
       }}
       components={{
-        IconLeft: ({ className, ...props }) => (
-          <ChevronLeft className={cn("size-4", className)} {...props} />
-        ),
-        IconRight: ({ className, ...props }) => (
-          <ChevronRight className={cn("size-4", className)} {...props} />
-        ),
-      }}
+        // react-day-picker's `components` generic can be strict; cast handlers to `any`
+        IconLeft: ((p: any) => {
+          const { className, ...rest } = p;
+          return <ChevronLeft className={cn("size-4", className)} {...rest} />;
+        }) as any,
+        IconRight: ((p: any) => {
+          const { className, ...rest } = p;
+          return <ChevronRight className={cn("size-4", className)} {...rest} />;
+        }) as any,
+      } as any}
       {...props}
     />
   );
