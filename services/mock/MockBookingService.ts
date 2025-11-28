@@ -7,7 +7,7 @@ import { bookings, boats } from '../../data/mockData';
 import { logApiOperation } from '../../config/apiMode';
 
 export class MockBookingService implements IBookingService {
-  private bookings: Booking[] = [...bookings];
+  private bookings: Booking[] = [...(bookings as unknown as Booking[])];
 
   async getBookings(filters?: BookingFilters): Promise<Booking[]> {
     logApiOperation('bookings', 'getBookings', filters);

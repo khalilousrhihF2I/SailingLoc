@@ -4,15 +4,16 @@
  * Démontre comment créer une réservation en utilisant les services
  */
 
-import React, { useState } from 'react';
-import { Calendar, Shield, ArrowLeft, User, Mail, Phone, Lock } from 'lucide-react';
+import  { useState } from 'react';
+import { ArrowLeft, User, Mail, Phone, Lock } from 'lucide-react';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
 import { Input } from '../components/ui/Input';
 import { Alert } from '../components/ui/Alert';
 import { StripeCheckout } from '../components/booking/StripeCheckout';
+import { Page } from '../types/navigation';
 // 👇 NOUVEAU : Import des services
-import { boatService, bookingService, userService, authService } from '../services/ServiceFactory';
+import { bookingService, authService } from '../services/ServiceFactory';
 import { useBoat } from '../hooks/useServices';
 
 interface BookingFlowWithServicesProps {
@@ -20,7 +21,7 @@ interface BookingFlowWithServicesProps {
   startDate: string;
   endDate: string;
   isLoggedIn?: boolean;
-  onNavigate: (page: string, data?: any) => void;
+  onNavigate: (page: Page, data?: any) => void;
   onAccountCreated?: () => void;
 }
 
@@ -224,13 +225,13 @@ export function BookingFlowWithServices({
                 </h2>
 
                 {!isLoggedIn && (
-                  <Alert type="info" className="mb-6">
+                  <Alert type="info">
                     Un compte sera créé automatiquement pour gérer votre réservation
                   </Alert>
                 )}
 
                 {accountError && (
-                  <Alert type="error" className="mb-6">{accountError}</Alert>
+                  <Alert type="error">{accountError}</Alert>
                 )}
 
                 <form onSubmit={(e) => { e.preventDefault(); handleAccountStep(); }} className="space-y-6">

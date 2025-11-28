@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 interface CardProps {
   children: React.ReactNode;
@@ -8,7 +8,7 @@ interface CardProps {
 }
 
 export function Card({ children, className = '', hover = false, onClick }: CardProps) {
-  const handleClick = (e: React.MouseEvent) => {
+  const handleClick = () => {
     if (onClick) {
       onClick();
     }

@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
-import { Search, MapPin, Anchor, Star, TrendingUp } from 'lucide-react';
+import  { useState } from 'react';
+import { Search, MapPin, Anchor, TrendingUp } from 'lucide-react';
 import { Card } from '../components/ui/Card';
 import { Input } from '../components/ui/Input';
 import { Button } from '../components/ui/Button';
 import { Badge } from '../components/ui/Badge';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
-import { destinations, boats } from '../data/mockData';
+// data imports not required here
+import { Page } from '../types/navigation';
 
 interface DestinationsPageProps {
-  onNavigate: (page: string, data?: any) => void;
+  onNavigate: (page: Page, data?: any) => void;
 }
 
 const allDestinations = [
@@ -216,8 +217,8 @@ export function DestinationsPage({ onNavigate }: DestinationsPageProps) {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-4 right-4">
-                    <Badge variant="success" className="bg-white text-ocean-900">
-                      <TrendingUp size={14} className='mr-1' />
+                    <Badge variant="success">
+                      <TrendingUp size={14} />
                       Populaire
                     </Badge>
                   </div>
@@ -247,7 +248,7 @@ export function DestinationsPage({ onNavigate }: DestinationsPageProps) {
                     <div className="text-sm text-gray-500 mb-2">Meilleure période :</div>
                     <div className="flex gap-2 flex-wrap">
                       {destination.popularMonths.map((month, idx) => (
-                        <Badge key={idx} variant="default" className="bg-ocean-50 text-ocean-700">
+                        <Badge key={idx} variant="default">
                           {month}
                         </Badge>
                       ))}
@@ -258,12 +259,12 @@ export function DestinationsPage({ onNavigate }: DestinationsPageProps) {
                     <div className="text-sm text-gray-500 mb-2">À découvrir :</div>
                     <div className="flex gap-2 flex-wrap">
                       {destination.highlights.slice(0, 3).map((highlight, idx) => (
-                        <Badge key={idx} variant="default" className="bg-gray-100 text-gray-700">
+                        <Badge key={idx} variant="default">
                           {highlight}
                         </Badge>
                       ))}
                       {destination.highlights.length > 3 && (
-                        <Badge variant="default" className="bg-gray-100 text-gray-700">
+                        <Badge variant="default">
                           +{destination.highlights.length - 3}
                         </Badge>
                       )}

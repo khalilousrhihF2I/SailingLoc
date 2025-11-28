@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
-import { Ship, Calendar, TrendingUp, Settings, Plus, LogOut, Edit, Eye } from 'lucide-react';
+import  { useState } from 'react';
+import { Ship, Calendar, TrendingUp, Plus, LogOut, Edit, Eye } from 'lucide-react';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
 import { Button } from '../components/ui/Button';
 import { boats, bookings } from '../data/mockData';
+import { Page } from '../types/navigation';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { AvailabilityCalendar } from '../components/availability/AvailabilityCalendar';
 
 interface OwnerDashboardProps {
-  onNavigate: (page: string, data?: any) => void;
+  onNavigate: (page: Page, data?: any) => void;
   onLogout: () => void;
 }
 
@@ -216,7 +217,7 @@ export function OwnerDashboard({ onNavigate, onLogout }: OwnerDashboardProps) {
                           alt={boat.name}
                           className="w-full h-full object-cover"
                         />
-                        <Badge variant="success" className="absolute top-3 right-3">
+                        <Badge variant="success">
                           Actif
                         </Badge>
                       </div>

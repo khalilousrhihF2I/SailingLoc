@@ -1,14 +1,15 @@
-import React from 'react';
+
 import { HeroSection } from '../components/home/HeroSection';
 import { BoatCard } from '../components/boats/BoatCard';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
 import { Anchor, Shield, ThumbsUp, Award, Star } from 'lucide-react';
 import { boats, destinations } from '../data/mockData';
+import { Page } from '../types/navigation';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 
 interface HomePageProps {
-  onNavigate: (page: string, data?: any) => void;
+  onNavigate: (page: Page, data?: any) => void;
 }
 
 export function HomePage({ onNavigate }: HomePageProps) {

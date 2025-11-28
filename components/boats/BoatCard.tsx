@@ -1,5 +1,5 @@
-import React from 'react';
-import { MapPin, Users, Star, Anchor } from 'lucide-react';
+
+import { MapPin, Users, Star} from 'lucide-react';
 import { Card } from '../ui/Card';
 import { Badge } from '../ui/Badge';
 import { ImageWithFallback } from '../figma/ImageWithFallback';

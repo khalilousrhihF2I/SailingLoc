@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import { MapPin, Users, Anchor, Calendar, Star, Shield, CheckCircle } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
@@ -6,13 +6,14 @@ import { Badge } from '../components/ui/Badge';
 import { DateRangePicker } from '../components/ui/DateRangePicker';
 import { boats, reviews } from '../data/mockData';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import { Page } from '../types/navigation';
 import { availabilityService } from '../services/ServiceFactory';
 import { UnavailablePeriod } from '../services/interfaces/IAvailabilityService';
 import { validateBookingDates, calculateDays } from '../utils/dateValidation';
 
 interface BoatDetailPageProps {
   boatId: number;
-  onNavigate: (page: string, data?: any) => void;
+  onNavigate: (page: Page, data?: any) => void;
 }
 
 export function BoatDetailPageWithAvailability({ boatId, onNavigate }: BoatDetailPageProps) {
@@ -92,7 +93,7 @@ export function BoatDetailPageWithAvailability({ boatId, onNavigate }: BoatDetai
   const handleBooking = () => {
     if (!canBook || !startDate || !endDate) return;
 
-    onNavigate('booking-flow', {
+    onNavigate('booking-step1', {
       boatId: boat.id,
       startDate,
       endDate,

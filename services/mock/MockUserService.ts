@@ -7,7 +7,7 @@ import { users } from '../../data/mockData';
 import { logApiOperation } from '../../config/apiMode';
 
 export class MockUserService implements IUserService {
-  private users: User[] = [...users];
+  private users: User[] = [...(users as unknown as User[])];
 
   async getUsers(): Promise<User[]> {
     logApiOperation('users', 'getUsers');

@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { Mail, Lock, User, Phone, Anchor } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 import { Input } from '../components/ui/Input';
 import { Card } from '../components/ui/Card';
 import { Alert } from '../components/ui/Alert';
+import { Page } from '../types/navigation';
 
 interface RegisterPageProps {
   onRegister: (userType: 'renter' | 'owner') => void;
-  onNavigate: (page: string) => void;
+  onNavigate: (page: Page) => void;
 }
 
 export function RegisterPage({ onRegister, onNavigate }: RegisterPageProps) {

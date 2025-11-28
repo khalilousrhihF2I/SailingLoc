@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { ArrowLeft, Ship, DollarSign, Users, Anchor, Calendar, Image as ImageIcon, CheckCircle, MapPin, Package } from 'lucide-react';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
@@ -6,18 +6,19 @@ import { Input } from '../components/ui/Input';
 import { Select } from '../components/ui/Select';
 import { Alert } from '../components/ui/Alert';
 import { FormHelperTips } from '../components/boats/FormHelperTips';
+import { Page } from '../types/navigation';
 import { FormProgress } from '../components/boats/FormProgress';
 
 import { boatService } from '../services/ServiceFactory';
 import { boatTypes } from '../data/mockData';
 
 interface CreateBoatListingPageProps {
-  onNavigate: (page: string, data?: any) => void;
+  onNavigate: (page: Page, data?: any) => void;
   ownerId: string;
-  ownerName: string;
+  ownerName?: string;
 }
 
-export function CreateBoatListingPage({ onNavigate, ownerId, ownerName }: CreateBoatListingPageProps) {
+export function CreateBoatListingPage({ onNavigate, ownerId }: CreateBoatListingPageProps) {
   const [step, setStep] = useState(1);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -230,7 +231,7 @@ export function CreateBoatListingPage({ onNavigate, ownerId, ownerName }: Create
         {/* Form */}
         <Card className="p-6 md:p-8">
           {error && (
-            <Alert type="error" className="mb-6">
+            <Alert type="error">
               {error}
             </Alert>
           )}

@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { CreditCard, Lock, Check } from 'lucide-react';
 import { Button } from '../ui/Button';
-import { Input } from '../ui/Input';
 import { Card } from '../ui/Card';
 import { Alert } from '../ui/Alert';
 

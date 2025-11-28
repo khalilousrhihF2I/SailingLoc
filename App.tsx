@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
+import { Page } from './types/navigation';
 import { Header } from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
 import { HomePage } from './pages/HomePage';
@@ -17,28 +18,7 @@ import { CreateBoatListingPage } from './pages/CreateBoatListingPage';
 import { EditBoatListingPage } from './pages/EditBoatListingPage';
 import { AboutPage } from './pages/AboutPage';
 
-type Page = 
-  | 'home'
-  | 'search'
-  | 'boat-detail'
-  | 'login'
-  | 'register'
-  | 'renter-dashboard'
-  | 'owner-dashboard'
-  | 'admin-dashboard'
-  | 'booking-step1'
-  | 'booking-confirmation'
-  | 'faq'
-  | 'contact'
-  | 'terms'
-  | 'privacy'
-  | 'about'
-  | 'destinations'
-  | 'forgot-password'
-  | 'create-listing'
-  | 'edit-listing'
-  | 'booking-detail'
-  | '404';
+// Use shared Page type from `types/navigation`
 
 type UserType = 'renter' | 'owner' | 'admin' | null;
 
@@ -118,7 +98,7 @@ export default function App() {
         return <OwnerDashboard onNavigate={navigate} onLogout={handleLogout} />;
       
       case 'admin-dashboard':
-        return <AdminDashboard onNavigate={navigate} onLogout={handleLogout} />;
+        return <AdminDashboard onLogout={handleLogout} />;
       
       case 'booking-step1':
         return (
@@ -144,7 +124,7 @@ export default function App() {
         return <FAQPage onNavigate={navigate} />;
       
       case 'contact':
-        return <ContactPage onNavigate={navigate} />;
+        return <ContactPage />;
       
       case 'terms':
         return <TermsPage />;
@@ -194,7 +174,6 @@ export default function App() {
           <CreateBoatListingPage
             onNavigate={navigate}
             ownerId="1"
-            ownerName="Jean Dupont"
           />
         );
       

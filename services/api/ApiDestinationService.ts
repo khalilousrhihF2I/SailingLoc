@@ -18,7 +18,7 @@ export class ApiDestinationService implements IDestinationService {
     
     try {
       const response = await apiClient.get<Destination[]>(this.endpoint);
-      return response.data;
+      return response.data ?? [];
     } catch (error) {
       console.error('[API] Error fetching destinations:', error);
       throw error;
@@ -33,7 +33,7 @@ export class ApiDestinationService implements IDestinationService {
     
     try {
       const response = await apiClient.get<Destination>(`${this.endpoint}/${id}`);
-      return response.data;
+      return response.data ?? null;
     } catch (error: any) {
       if (error.response?.status === 404) {
         return null;
@@ -50,10 +50,8 @@ export class ApiDestinationService implements IDestinationService {
     logApiOperation('destinations', 'searchDestinations', { query });
     
     try {
-      const response = await apiClient.get<Destination[]>(`${this.endpoint}/search`, {
-        params: { query }
-      });
-      return response.data;
+      const response = await apiClient.get<Destination[]>(`${this.endpoint}/search?query=${encodeURIComponent(query)}`);
+      return response.data ?? [];
     } catch (error) {
       console.error('[API] Error searching destinations:', error);
       throw error;
@@ -67,8 +65,8 @@ export class ApiDestinationService implements IDestinationService {
     logApiOperation('destinations', 'getDestinationsByRegion', { region });
     
     try {
-      const response = await apiClient.get<Destination[]>(`${this.endpoint}/region/${region}`);
-      return response.data;
+      const response = await apiClient.get<Destination[]>(`${this.endpoint}/region/${encodeURIComponent(region)}`);
+      return response.data ?? [];
     } catch (error) {
       console.error('[API] Error fetching destinations by region:', error);
       throw error;
@@ -82,10 +80,8 @@ export class ApiDestinationService implements IDestinationService {
     logApiOperation('destinations', 'getPopularDestinations', { limit });
     
     try {
-      const response = await apiClient.get<Destination[]>(`${this.endpoint}/popular`, {
-        params: { limit }
-      });
-      return response.data;
+      const response = await apiClient.get<Destination[]>(`${this.endpoint}/popular?limit=${limit}`);
+      return response.data ?? [];
     } catch (error) {
       console.error('[API] Error fetching popular destinations:', error);
       throw error;

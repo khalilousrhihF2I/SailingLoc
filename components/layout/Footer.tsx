@@ -1,8 +1,9 @@
-import React from 'react';
+
 import { Anchor, Facebook, Instagram, Twitter, Mail } from 'lucide-react';
+import { Page } from '../../types/navigation';
 
 interface FooterProps {
-  onNavigate: (page: string) => void;
+  onNavigate: (page: Page) => void;
 }
 
 export function Footer({ onNavigate }: FooterProps) {

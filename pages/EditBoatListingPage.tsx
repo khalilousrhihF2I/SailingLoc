@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import { ArrowLeft, Ship, DollarSign, Users, Anchor, Calendar, Image as ImageIcon, CheckCircle, MapPin, Package, Loader } from 'lucide-react';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
@@ -6,6 +6,7 @@ import { Input } from '../components/ui/Input';
 import { Select } from '../components/ui/Select';
 import { Alert } from '../components/ui/Alert';
 import { FormHelperTips } from '../components/boats/FormHelperTips';
+import { Page } from '../types/navigation';
 import { FormProgress } from '../components/boats/FormProgress';
 
 import { boatService } from '../services/ServiceFactory';
@@ -13,7 +14,7 @@ import { boatTypes } from '../data/mockData';
 import type { Boat } from '../services/interfaces/IBoatService';
 
 interface EditBoatListingPageProps {
-  onNavigate: (page: string, data?: any) => void;
+  onNavigate: (page: Page, data?: any) => void;
   boatId: number;
 }
 
@@ -55,8 +56,7 @@ export function EditBoatListingPage({ onNavigate, boatId }: EditBoatListingPageP
   const [newEquipment, setNewEquipment] = useState('');
 
   // Étape 5: Photos supplémentaires (optionnel pour v1)
-  const [photos, setPhotos] = useState<string[]>([]);
-  const [newPhotoUrl, setNewPhotoUrl] = useState('');
+  // Photo state is not used in current implementation
 
   const equipmentPresets = [
     'GPS',
@@ -319,7 +319,7 @@ export function EditBoatListingPage({ onNavigate, boatId }: EditBoatListingPageP
         {/* Form */}
         <Card className="p-6 md:p-8">
           {error && boat && (
-            <Alert type="error" className="mb-6">
+            <Alert type="error">
               {error}
             </Alert>
           )}

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import { Calendar, AlertCircle } from 'lucide-react';
 import { Input } from './Input';
 import { Alert } from './Alert';

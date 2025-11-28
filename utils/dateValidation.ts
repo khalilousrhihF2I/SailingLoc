@@ -146,8 +146,8 @@ export function isDateUnavailable(
 export function checkDateRangeOverlap(
   startDate: string,
   endDate: string,
-  unavailablePeriods: Array<{ startDate: string; endDate: string }>
-): { hasOverlap: boolean; conflictingPeriods: typeof unavailablePeriods } {
+  unavailablePeriods: Array<{ startDate: string; endDate: string; type?: string; reason?: string }>
+): { hasOverlap: boolean; conflictingPeriods: Array<{ startDate: string; endDate: string; type?: string; reason?: string }> } {
   const start = new Date(startDate);
   const end = new Date(endDate);
   start.setHours(0, 0, 0, 0);

@@ -1,11 +1,12 @@
-import React from 'react';
+
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
 import { Input } from '../components/ui/Input';
 import { Mail, Phone, MapPin, HelpCircle } from 'lucide-react';
+import { Page } from '../types/navigation';
 
 interface SecondaryPageProps {
-  onNavigate: (page: string) => void;
+  onNavigate: (page: Page) => void;
 }
 
 export function FAQPage({ onNavigate }: SecondaryPageProps) {
@@ -67,7 +68,7 @@ export function FAQPage({ onNavigate }: SecondaryPageProps) {
   );
 }
 
-export function ContactPage({ onNavigate }: SecondaryPageProps) {
+export function ContactPage() {
   return (
     <div className="min-h-screen bg-gray-50 py-16">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">

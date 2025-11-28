@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Ship, DollarSign, Users, Anchor, Calendar, Image as ImageIcon, MapPin, Package, CheckCircle } from 'lucide-react';
 import { Input } from '../ui/Input';
 import { Select } from '../ui/Select';

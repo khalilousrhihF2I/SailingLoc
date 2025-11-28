@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Edit, Eye, Trash2, MoreVertical, Calendar, TrendingUp } from 'lucide-react';
+import  { useState } from 'react';
+import { Edit, Eye, Trash2, MoreVertical, Calendar } from 'lucide-react';
 import { Card } from '../ui/Card';
 import { Badge } from '../ui/Badge';
 import { Button } from '../ui/Button';
@@ -37,7 +37,7 @@ export function BoatManagementCard({
           alt={boat.name}
           className="w-full h-full object-cover"
         />
-        <Badge variant="success" className="absolute top-3 right-3">
+        <Badge variant="success">
           Actif
         </Badge>
         {boat.rating > 0 && (

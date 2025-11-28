@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { SlidersHorizontal, MapPin, X } from 'lucide-react';
 import { BoatCard } from '../components/boats/BoatCard';
 import { Button } from '../components/ui/Button';
@@ -6,9 +6,10 @@ import { Input } from '../components/ui/Input';
 import { Select } from '../components/ui/Select';
 import { Badge } from '../components/ui/Badge';
 import { boats, boatTypes } from '../data/mockData';
+import { Page } from '../types/navigation';
 
 interface SearchPageProps {
-  onNavigate: (page: string, data?: any) => void;
+  onNavigate: (page: Page, data?: any) => void;
   initialFilters?: any;
 }
 

@@ -5,24 +5,24 @@
  * Pour activer cette version, remplacez le contenu de /pages/SearchPage.tsx
  */
 
-import React, { useState, useEffect } from 'react';
-import { SlidersHorizontal, MapPin, X } from 'lucide-react';
+import  { useState } from 'react';
+import { MapPin, X } from 'lucide-react';
 import { BoatCard } from '../components/boats/BoatCard';
 import { Button } from '../components/ui/Button';
 import { Input } from '../components/ui/Input';
 import { Select } from '../components/ui/Select';
 import { Badge } from '../components/ui/Badge';
 import { boatTypes } from '../data/mockData';
+import { Page } from '../types/navigation';
 // 👇 NOUVEAU : Import du hook de service
 import { useBoats } from '../hooks/useServices';
 
 interface SearchPageProps {
-  onNavigate: (page: string, data?: any) => void;
+  onNavigate: (page: Page, data?: any) => void;
   initialFilters?: any;
 }
 
 export function SearchPageWithServices({ onNavigate, initialFilters = {} }: SearchPageProps) {
-  const [showFilters, setShowFilters] = useState(false);
   const [filters, setFilters] = useState({
     location: initialFilters.location || '',
     destination: initialFilters.destination || '',

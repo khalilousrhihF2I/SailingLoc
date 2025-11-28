@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { AlertTriangle, Loader, X } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { Card } from '../ui/Card';

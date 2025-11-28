@@ -1,9 +1,10 @@
-import React from 'react';
+
 import { Check, Calendar, MapPin, Anchor, Mail, Download, ArrowRight } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import { Page } from '../types/navigation';
 
 interface BookingConfirmationPageProps {
   bookingData: {
@@ -16,11 +17,11 @@ interface BookingConfirmationPageProps {
     renterEmail: string;
     renterName: string;
   };
-  onNavigate: (page: string, data?: any) => void;
+  onNavigate: (page: Page, data?: any) => void;
 }
 
 export function BookingConfirmationPage({ bookingData, onNavigate }: BookingConfirmationPageProps) {
-  const { bookingId, boat, startDate, endDate, totalPrice, serviceFee, renterEmail, renterName } = bookingData;
+  const { bookingId, boat, startDate, endDate, totalPrice, serviceFee, renterEmail } = bookingData;
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -231,7 +232,7 @@ export function BookingConfirmationPage({ bookingData, onNavigate }: BookingConf
             Partagez votre expérience SailingLoc avec vos amis !
           </p>
           <div className="flex justify-center gap-3">
-            <Badge variant="default" className="bg-ocean-50 text-ocean-700 cursor-pointer hover:bg-ocean-100">
+            <Badge variant="default">
               Partager
             </Badge>
           </div>

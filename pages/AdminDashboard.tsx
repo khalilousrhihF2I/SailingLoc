@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { Users, Ship, Calendar, DollarSign, AlertCircle, Settings, LogOut, CheckCircle, X, Search } from 'lucide-react';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
@@ -7,11 +7,10 @@ import { Input } from '../components/ui/Input';
 import { adminStats, users, boats, bookings } from '../data/mockData';
 
 interface AdminDashboardProps {
-  onNavigate: (page: string, data?: any) => void;
   onLogout: () => void;
 }
 
-export function AdminDashboard({ onNavigate, onLogout }: AdminDashboardProps) {
+export function AdminDashboard({ onLogout }: AdminDashboardProps) {
   const [activeTab, setActiveTab] = useState<'overview' | 'users' | 'boats' | 'bookings' | 'payments'>('overview');
   const [searchTerm, setSearchTerm] = useState('');
 

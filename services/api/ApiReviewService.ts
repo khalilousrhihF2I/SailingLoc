@@ -18,7 +18,7 @@ export class ApiReviewService implements IReviewService {
     
     try {
       const response = await apiClient.get<Review[]>(this.endpoint);
-      return response.data;
+      return response.data ?? [];
     } catch (error) {
       console.error('[API] Error fetching reviews:', error);
       throw error;
@@ -33,7 +33,7 @@ export class ApiReviewService implements IReviewService {
     
     try {
       const response = await apiClient.get<Review[]>(`${this.endpoint}/boat/${boatId}`);
-      return response.data;
+      return response.data ?? [];
     } catch (error) {
       console.error('[API] Error fetching boat reviews:', error);
       throw error;
@@ -48,7 +48,7 @@ export class ApiReviewService implements IReviewService {
     
     try {
       const response = await apiClient.get<Review>(`${this.endpoint}/${id}`);
-      return response.data;
+      return response.data ?? null;
     } catch (error: any) {
       if (error.response?.status === 404) {
         return null;
@@ -66,6 +66,7 @@ export class ApiReviewService implements IReviewService {
     
     try {
       const response = await apiClient.post<Review>(this.endpoint, input);
+      if (!response.data) throw new Error(response.error || 'Empty response');
       return response.data;
     } catch (error) {
       console.error('[API] Error creating review:', error);
@@ -99,7 +100,7 @@ export class ApiReviewService implements IReviewService {
     
     try {
       const response = await apiClient.get<{ average: number }>(`${this.endpoint}/boat/${boatId}/average`);
-      return response.data.average;
+      return response.data?.average ?? 0;
     } catch (error) {
       console.error('[API] Error fetching average rating:', error);
       throw error;
@@ -113,10 +114,8 @@ export class ApiReviewService implements IReviewService {
     logApiOperation('reviews', 'getRecentReviews', { limit });
     
     try {
-      const response = await apiClient.get<Review[]>(`${this.endpoint}/recent`, {
-        params: { limit }
-      });
-      return response.data;
+      const response = await apiClient.get<Review[]>(`${this.endpoint}/recent?limit=${limit}`);
+      return response.data ?? [];
     } catch (error) {
       console.error('[API] Error fetching recent reviews:', error);
       throw error;

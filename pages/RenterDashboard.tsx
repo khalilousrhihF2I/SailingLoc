@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { Calendar, CreditCard, User, FileText, LogOut, Ship, Clock, CheckCircle } from 'lucide-react';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
 import { Button } from '../components/ui/Button';
 import { bookings } from '../data/mockData';
+import { Page } from '../types/navigation';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 
 interface RenterDashboardProps {
-  onNavigate: (page: string, data?: any) => void;
+  onNavigate: (page: Page, data?: any) => void;
   onLogout: () => void;
 }
 

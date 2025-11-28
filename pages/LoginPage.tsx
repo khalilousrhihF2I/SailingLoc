@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { Mail, Lock, Anchor } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 import { Input } from '../components/ui/Input';
 import { Card } from '../components/ui/Card';
 import { Alert } from '../components/ui/Alert';
+import { Page } from '../types/navigation';
 
 interface LoginPageProps {
   onLogin: (userType: 'renter' | 'owner' | 'admin') => void;
-  onNavigate: (page: string) => void;
+  onNavigate: (page: Page) => void;
 }
 
 export function LoginPage({ onLogin, onNavigate }: LoginPageProps) {

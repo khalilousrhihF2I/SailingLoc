@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { MapPin, Users, Anchor, Calendar, Star, Shield, CheckCircle } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
 import { boats, reviews } from '../data/mockData';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import { Page } from '../types/navigation';
 
 interface BoatDetailPageProps {
   boatId: number;
-  onNavigate: (page: string, data?: any) => void;
+  onNavigate: (page: Page, data?: any) => void;
 }
 
 export function BoatDetailPage({ boatId, onNavigate }: BoatDetailPageProps) {

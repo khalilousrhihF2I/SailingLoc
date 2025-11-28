@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { HelpCircle, X, Lightbulb } from 'lucide-react';
+import  { useState } from 'react';
+import { X, Lightbulb } from 'lucide-react';
 
 interface FormHelperTipsProps {
   step: number;

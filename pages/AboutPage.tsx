@@ -1,10 +1,11 @@
-import React from 'react';
+
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
 import { Anchor, Shield, Users, Award, TrendingUp, Heart, Linkedin, Mail } from 'lucide-react';
+import { Page } from '../types/navigation';
 
 interface AboutPageProps {
-  onNavigate: (page: string) => void;
+  onNavigate: (page: Page) => void;
 }
 
 export function AboutPage({ onNavigate }: AboutPageProps) {

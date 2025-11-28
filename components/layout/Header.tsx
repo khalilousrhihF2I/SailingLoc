@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { Anchor, Menu, X, User } from 'lucide-react';
 import { Button } from '../ui/Button';
+import { Page } from '../../types/navigation';
 
 interface HeaderProps {
   isLoggedIn?: boolean;
   userType?: 'renter' | 'owner' | 'admin' | null;
-  onNavigate: (page: string) => void;
+  onNavigate: (page: Page) => void;
 }
 
 export function Header({ isLoggedIn = false, userType = null, onNavigate }: HeaderProps) {
